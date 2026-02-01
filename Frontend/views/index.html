@@ -7,41 +7,45 @@
   <title>HappyMiles|Tour packages</title>
   <link rel="stylesheet" href="../public/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
 </head>
 
 <body>
-  <header>
-    <nav>
-      <img src="logo1.png" width=200px>
-      <ul>
-        <li><a href=""><i class="fa-solid fa-house" style="color: white;"></i> Home</a></li>
-        <a href=""><button>Sign Up</button></a>
-      </ul>
-    </nav>
-
-
-    <!-- first page -->
-    <div>
-
-
-      <div class="first-page">
-        <div class="frst">
-          <div class="search-bar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Enter your dream destination">
-          </div>
-          <div class="note-div">
-            <button>Explore</button>
-          </div>
+  <!-- First page start -->
+  <section class="first-p">
+    <div class="overlay"></div>
+    <div class="content-div">
+      <nav>
+        <img src="logo1.png" width=200px>
+        <div class="menu-bar">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+        <ul>
+          <li><a href=""><i class="fa-solid fa-house" style="color: white;"></i> Home</a></li>
+          <li><a href=""><button>Sign Up</button></a></li>
+        </ul>
+      </nav>
+      <!-- first page -->
+      <div class="main-content">
+        <div class="search-bar">
+          <input type="text" placeholder="Enter your dream destination">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="note-div">
+          <button>Explore</button>
+        </div>
+
       </div>
-      <!-- First page end -->
-  </header>
+    </div>
+    <!-- First page end -->
+
+  </section>
+  <!-- First page end -->
 
   <!-- Second Page start -->
   <section class="second-page">
-    <h1>Browse <span class="head">By Categories</span></h1>
+    <h1 class="sub-heading">Browse <span class="head">By Categories</span></h1>
     <ul>
       <li><a href="">International</a></li>
       <li><a href="">Domestic</a></li>
@@ -88,45 +92,62 @@
   <!-- Second page end -->
 
   <!-- Third page start -->
-  <section class="second-page">
-    <h1>Top <span class="head">Tour Packages</span></h1>
+  <section class="third-page">
+    <h1 class="sub-heading">Top <span class="head">Tour Packages</span></h1>
     <div class="package-div ">
-      <div>
+      <div class="card">
         <img
           src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
           alt="">
-        <h3>Paris</h3>
+        <div class="package-detail">
+          <h3>Paris</h3>
+          <p><span class="day">1 DAY</span> <span class="day">2 NIGHT</span></p>
+          <p class="price">Starts from <span class="price-val"> $455</span></p>
+        </div>
       </div>
-      <div>
+      <div class="card">
         <img
           src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
           alt="">
-        <h3>Paris</h3>
+        <div class="package-detail">
+          <h3>Paris</h3>
+          <p><span class="day">1 DAY</span> <span class="day">2 NIGHT</span></p>
+          <p class="price">Starts from <span class="price-val"> $455</span></p>
+        </div>
       </div>
-      <div>
+      <div class="card">
         <img
           src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
           alt="">
-        <h3>Paris</h3>
+        <div class="package-detail">
+          <h3>Paris</h3>
+          <p><span class="day">1 DAY</span> <span class="day">2 NIGHT</span></p>
+          <p class="price">Starts from <span class="price-val"> $455</span></p>
+        </div>
       </div>
-      <div>
+      <div class="card">
         <img
           src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
           alt="">
-        <h3>Paris</h3>
+        <div class="package-detail">
+          <h3>Paris</h3>
+          <p><span class="day">1 DAY</span> <span class="day">2 NIGHT</span></p>
+          <p class="price">Starts from <span class="price-val"> $455</span></p>
+        </div>
       </div>
-      <div>
+      <div class="card">
         <img
           src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
           alt="">
-        <h3>Paris</h3>
+        <div class="package-detail">
+          <h3>Paris</h3>
+          <p><span class="day">1 DAY</span> <span class="day">2 NIGHT</span></p>
+          <p class="price">Starts from <span class="price-val"> $455</span></p>
+        </div>
       </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
+
+
+
     </div>
   </section>
   <!-- Third page end -->
@@ -134,21 +155,38 @@
   <!-- Footer start -->
 
   <footer>
-    <img src="logo.png"></img>
+    <div>
+      <img src="logo.png"></img>
+      <p></p>
+    </div>
     <div class="footer-list">
-      <div>
+      <div class="items">
         <h3>Our Office</h3>
         <p>Located across the country, ready to assist in planning & booking your perfect vacation.</p>
       </div>
-      <div>
+      <div class="items">
         <h3>Call Us</h3>
-        <p>Located across the country, ready to assist in planning & booking your perfect vacation.</p>
+        <p>Request a quote, or just chat about your next vacation. We're always happy to help!.</p>
+        <p style="font-size: 18px; color: rgb(49, 49, 49);"><i class="fa-solid fa-phone"></i> +91 9995198211</p>
       </div>
-      <div>
+      <div class="items">
         <h3>Connect with Us</h3>
-        <p>Located across the country, ready to assist in planning & booking your perfect vacation.</p>
+        <p>Find exclusive offers, updates and more..</p>
+        <ul class="social">
+          <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+        </ul>
       </div>
-
+      <div class="items">
+        <h3>About</h3>
+        <ul>
+          <li>home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </div>
   </footer>
 </body>
