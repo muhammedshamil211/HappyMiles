@@ -16,16 +16,22 @@
     <div class="content-div">
       <nav>
         <img src="logo1.png" width=200px>
-        <div class="menu-bar">
+        <div class="menu-bar" onclick="menu()()">
           <div></div>
           <div></div>
           <div></div>
         </div>
         <ul>
           <li><a href=""><i class="fa-solid fa-house" style="color: white;"></i> Home</a></li>
-          <li><a href=""><button>Sign Up</button></a></li>
+          <li><a><button onclick="openLogin()" class="sign-btn">Sign Up</button></a></li>
         </ul>
       </nav>
+      <div class="menu" id="menu">
+        <ul>
+          <li>Home</li>
+          <li><a><button onclick="openLogin()" class="sign-btn">Sign Up</button></a></li>
+        </ul>
+      </div>
       <!-- first page -->
       <div class="main-content">
         <div class="search-bar">
@@ -38,55 +44,54 @@
 
       </div>
     </div>
-    <!-- First page end -->
-
   </section>
   <!-- First page end -->
+
+  <!-- Log in page start-->
+  <div class="popup" id="login">
+    <div class="login-content">
+      <span class="close-button" onclick="closeLogin()">&times;</span>
+      <h2>Login</h2>
+
+      <form id="mylogin">
+        <input type="text" placeholder="Email" id="log-email">
+        <input type="password" placeholder="password" id="log-pass">
+        <button id="login-btn" onclick="login()">Login</button>
+
+        <p>Don't have an account <a href="" onclick="openSignUp();return false;">Sign Up</a></p>
+        <p class="warning" id="warn"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup-sign" id="signUp">
+    <div class="signup-content">
+      <span class="close-button" onclick="closeSignUp()">&times;</span>
+      <h2>sign Up</h2>
+
+      <form id="mysignUp">
+        <input type="text" placeholder="Email" id="email">
+        <input type="password" placeholder="password" id="pass">
+        <input type="password" placeholder="render password" id="re-pass">
+        <button id="signUp-btn" onclick="signUp()">Sign Up</button>
+
+        <p>You have an account <a href="" onclick="openLogin();return false;">Log in</a></p>
+        <p class="warning" id="warn-s"></p>
+      </form>
+    </div>
+  </div>
+  <!-- Log in page end -->
 
   <!-- Second Page start -->
   <section class="second-page">
     <h1 class="sub-heading">Browse <span class="head">By Categories</span></h1>
     <ul>
-      <li><a href="">International</a></li>
-      <li><a href="">Domestic</a></li>
+      <li><a href="" onclick="internationalDisplay();return false;">International</a></li>
+      <li><a href="" onclick="domesticDisplay();return false;">Domestic</a></li>
     </ul>
-    <div class="place-div scroll">
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
-      <div>
-        <img
-          src="https://www.usnews.com/object/image/00000180-6260-d187-a5cb-fefd67170001/eiffel-tower-outro-stock.jpg?update-time=1739908225595&size=responsive640"
-          alt="">
-        <h3>Paris</h3>
-      </div>
+    <div class="place-div scroll" id="place-div">
+    </div>
+    <div class="place-div scroll" id="domestic-div">
     </div>
   </section>
   <!-- Second page end -->
@@ -189,6 +194,8 @@
       </div>
     </div>
   </footer>
+  <script src="../public/js/loginPage.js"></script>
+  <script src="../public/js/addPlace.js"></script>
 </body>
 
 </html>
