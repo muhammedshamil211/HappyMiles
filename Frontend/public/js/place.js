@@ -1,23 +1,18 @@
+import { setPackageDiv, setDisplay } from "./ui.js";
 import { internationalPlace, domestic } from "./data.js";
-import { setDisplay } from "./ui.js";
+import { internationalDisplay, domesticDisplay } from "./script.js";
+
 
 const domeDisp = document.getElementById('domestic-div');
 const display = document.getElementById('place-div');
+
+
 
 display.style.display = 'flex';
 domeDisp.style.display = 'none';
 
 setDisplay(internationalPlace, display);
 setDisplay(domestic, domeDisp);
-
-export function internationalDisplay() {
-    domeDisp.style.display = 'none';
-    display.style.display = 'flex';
-}
-export function domesticDisplay() {
-    display.style.display = 'none';
-    domeDisp.style.display = 'flex';
-}
 
 if (display.style.display === 'flex') {
     document.getElementById('inter').focus();
@@ -32,3 +27,13 @@ document.getElementById('domes').addEventListener('click', e => {
     e.preventDefault();
     domesticDisplay();
 });
+
+const params = new URLSearchParams(window.location.search);
+const placeName = params.get('place');
+
+if (placeName) {
+    setPackageDiv(placeName);
+
+} else {
+    setPackageDiv('Dubai');
+}

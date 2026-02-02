@@ -11,25 +11,30 @@
 
 <body>
   <!-- First page start -->
-  <section class="first-p">
+  <section class="first-p" id="home">
     <div class="overlay"></div>
     <div class="content-div">
       <nav>
         <img src="logo1.png" width=200px>
-        <div class="menu-bar" onclick="menu()()">
+        <div class="menu-bar" id="menu-bar">
           <div></div>
           <div></div>
           <div></div>
         </div>
         <ul>
           <li><a href=""><i class="fa-solid fa-house" style="color: white;"></i> Home</a></li>
-          <li><a><button onclick="openLogin()" class="sign-btn">Sign Up</button></a></li>
+          <li><a><button class="sign-btn" id="sign-btn">Sign Up</button></a></li>
         </ul>
       </nav>
       <div class="menu" id="menu">
         <ul>
           <li>Home</li>
-          <li><a><button onclick="openLogin()" class="sign-btn">Sign Up</button></a></li>
+          <hr>
+          <li>About</li>
+          <hr>
+          <li>Contact Us</li>
+          <hr>
+          <li><a><button class="sign-btn" id="sign-btn3">Sign Up</button></a></li>
         </ul>
       </div>
       <!-- first page -->
@@ -50,15 +55,15 @@
   <!-- Log in page start-->
   <div class="popup" id="login">
     <div class="login-content">
-      <span class="close-button" onclick="closeLogin()">&times;</span>
+      <span class="close-button" id="close1">&times;</span>
       <h2>Login</h2>
 
       <form id="mylogin">
         <input type="text" placeholder="Email" id="log-email">
         <input type="password" placeholder="password" id="log-pass">
-        <button id="login-btn" onclick="login()">Login</button>
+        <button id="login-btn">Login</button>
 
-        <p>Don't have an account <a href="" onclick="openSignUp();return false;">Sign Up</a></p>
+        <p>Don't have an account <a href="" id="sign-btn1">Sign Up</a></p>
         <p class="warning" id="warn"></p>
       </form>
     </div>
@@ -66,16 +71,16 @@
 
   <div class="popup-sign" id="signUp">
     <div class="signup-content">
-      <span class="close-button" onclick="closeSignUp()">&times;</span>
+      <span class="close-button" id="close2">&times;</span>
       <h2>sign Up</h2>
 
       <form id="mysignUp">
         <input type="text" placeholder="Email" id="email">
         <input type="password" placeholder="password" id="pass">
         <input type="password" placeholder="render password" id="re-pass">
-        <button id="signUp-btn" onclick="signUp()">Sign Up</button>
+        <button id="signUp-btn">Sign Up</button>
 
-        <p>You have an account <a href="" onclick="openLogin();return false;">Log in</a></p>
+        <p>You have an account <a href="" id="login-a">Log in</a></p>
         <p class="warning" id="warn-s"></p>
       </form>
     </div>
@@ -86,8 +91,8 @@
   <section class="second-page">
     <h1 class="sub-heading">Browse <span class="head">By Categories</span></h1>
     <ul>
-      <li><a href="" onclick="internationalDisplay();return false;">International</a></li>
-      <li><a href="" onclick="domesticDisplay();return false;">Domestic</a></li>
+      <li><a href="" id="inter">International</a></li>
+      <li><a href="" id="domes">Domestic</a></li>
     </ul>
     <div class="place-div scroll" id="place-div">
     </div>
@@ -194,8 +199,8 @@
       </div>
     </div>
   </footer>
-  <script src="../public/js/loginPage.js"></script>
-  <script src="../public/js/addPlace.js"></script>
+  <script type="module" src="../public/js/auth.js"></script>
+  <script type="module" src="../public/js/script.js"></script>
 </body>
 
 </html>

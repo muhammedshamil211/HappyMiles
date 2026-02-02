@@ -58,3 +58,7 @@ function domesticDisplay() {
     domeDisp.style.display = 'flex';
 }
 
+if(display.style.display === 'flex'){
+    document.getElementById('inter').focus();
+}
+
