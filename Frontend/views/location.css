@@ -315,6 +315,13 @@ nav button:hover {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        border 0.5s ease;
+}
+
+.place-div div img:hover {
+    border: 4px solid wheat;
+    transform: scale(1.05);
 }
 
 .place-div img {
@@ -354,6 +361,13 @@ h3 {
     gap: 10px;
     width: 31%;
     background-color: rgb(246, 246, 246);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
 }
 
 .card img {

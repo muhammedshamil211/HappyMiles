@@ -15,7 +15,18 @@ export const internationalPlace = [
         image: "https://resize.indiatvnews.com/en/resize/gallery/1200_-/2025/03/1-1741160489.jpg",
         name: "Malaysia"
 
+    }, {
+        image: "https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name: "New York"
+    }, {
+        image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name: "Tokyo"
+    }, {
+        image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1170&auto=format&fit=crop",
+        name: "Bali"
     }
+
+
 ];
 export const domestic = [
     {
@@ -25,7 +36,19 @@ export const domestic = [
     {
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40dAuljYvCH_6IoVUa-Tf7huR2jGpfEv2jg&s",
         name: "Manali"
+    }, {
+        image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1170&auto=format&fit=crop",
+        name: "Jaipur"
+    }, {
+        image: "https://images.unsplash.com/photo-1587922546307-776227941871?q=80&w=1170&auto=format&fit=crop",
+        name: "Goa"
+    }, {
+        image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1170&auto=format&fit=crop",
+        name: "Kerala"
     }
+
+
+
 ];
 
 
@@ -113,5 +136,111 @@ export const places = [
                 price: 567
             }
         ]
+    }, {
+        name: 'Bali',
+        image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1170&auto=format&fit=crop',
+        package: [
+            {
+                name: 'Bali premium',
+                image: 'https://images.unsplash.com/photo-1558005137-d9619a5c539f?w=600&auto=format&fit=crop&q=60',
+                day: [6, 7],
+                price: 480
+            },
+            {
+                name: 'Bali medium',
+                image: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600&auto=format&fit=crop&q=60',
+                day: [4, 5],
+                price: 330
+            }
+        ]
     },
+
+    {
+        name: 'New York',
+        image: 'https://plus.unsplash.com/premium_photo-1682048358672-1c5c6c9ed2ae?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        package: [
+            {
+                name: 'New York premium',
+                image: 'https://images.unsplash.com/photo-1522083165195-3424ed129620?w=600&auto=format&fit=crop&q=60',
+                day: [5, 6],
+                price: 560
+            },
+            {
+                name: 'New York medium',
+                image: 'https://plus.unsplash.com/premium_photo-1682048358672-1c5c6c9ed2ae?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                day: [3, 4],
+                price: 420
+            }
+        ]
+    },
+
+    {
+        name: 'Tokyo',
+        image: 'https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1170&auto=format&fit=crop',
+        package: [
+            {
+                name: 'Tokyo premium',
+                image: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&auto=format&fit=crop&q=60',
+                day: [6, 7],
+                price: 600
+            },
+            {
+                name: 'Tokyo medium',
+                image: 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&auto=format&fit=crop&q=60',
+                day: [4, 5],
+                price: 450
+            }
+        ]
+    }, {
+        name: 'Jaipur',
+        image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1170&auto=format&fit=crop',
+        package: [
+            {
+                name: 'Jaipur premium',
+                image: 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=600&auto=format&fit=crop&q=60',
+                day: [4, 5],
+                price: 420
+            },
+            {
+                name: 'Jaipur medium',
+                image: 'https://images.unsplash.com/photo-1504705759706-c5ee7158f8bb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                day: [3, 4],
+                price: 300
+            }
+        ]
+    }, {
+        name: 'Goa',
+        image: 'https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        package: [
+            {
+                name: 'Goa premium',
+                image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=60',
+                day: [5, 6],
+                price: 480
+            },
+            {
+                name: 'Goa medium',
+                image: 'https://images.unsplash.com/photo-1687079504254-23bac6232f46?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                day: [3, 4],
+                price: 340
+            }
+        ]
+    }, {
+        name: 'Kerala',
+        image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1170&auto=format&fit=crop',
+        package: [
+            {
+                name: 'Kerala premium',
+                image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&auto=format&fit=crop&q=60',
+                day: [5, 6],
+                price: 500
+            },
+            {
+                name: 'Kerala medium',
+                image: 'https://images.unsplash.com/photo-1589983846997-04788035bc83?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                day: [4, 5],
+                price: 360
+            }
+        ]
+    }
 ];

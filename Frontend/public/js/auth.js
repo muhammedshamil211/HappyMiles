@@ -31,8 +31,18 @@ function signUp() {
     const email = document.getElementById('email').value.trim();
     const pass1 = document.getElementById('pass').value.trim();
     const pass2 = document.getElementById('re-pass').value.trim();
-
     clearInput('email', 'pass', 're-pass');
+    if (!email.includes('@')) {
+        warnS.style.color = 'red';
+        warnS.innerText = `Please enter valid Email!`;
+        return;
+    }
+    if (!email || !pass1 || !pass2) {
+        warnS.style.color = 'red';
+        warnS.innerText = `Please fill all the fields!`;
+        return;
+    }
+
 
     const userExist = users.find(user => user.email.toLowerCase() === email.toLowerCase());
 
@@ -50,6 +60,7 @@ function signUp() {
     }
     users.push({ email, password: pass1 });
     setToLocalStorage(users);
+    window.location.href = `index.html`
 
     warnS.innerText = `Sign Up successfully`;
     warnS.style.color = 'green';
@@ -106,20 +117,23 @@ function menu() {
     menuOpen = !menuOpen;
 
 }
-if (window.innerWidth < 681){
-    const m = document.getElementById('menu').style.direction = 'none'; 
+if (window.innerWidth < 681) {
+    const m = document.getElementById('menu').style.direction = 'none';
 }
 
-    // Outside the screen to close the form
-    window.onclick = function (e) {
-        const popup = document.getElementById('login');
-        const popupSign = this.document.getElementById('signUp');
+// Outside the screen to close the form
+window.onclick = function (e) {
+    const popup = document.getElementById('login');
+    const popupSign = document.getElementById('signUp');
+    const menu = document.getElementById('menu');
 
-        if (e.target === popup || e.target === popupSign) {
-            popup.style.display = 'none';
-            popupSign.style.display = 'none';
-        }
-    };
+    if (e.target === popup || e.target === popupSign || e.target === menu) {
+        popup.style.display = 'none';
+        popupSign.style.display = 'none';
+        menu.style.display = 'none';
+
+    }
+};
 
 // prevent default reloading when submit
 document.getElementById('mysignUp').addEventListener('submit', (event) => {

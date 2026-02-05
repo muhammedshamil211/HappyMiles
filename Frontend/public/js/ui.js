@@ -21,7 +21,9 @@ export function setPackageDiv(name) {
                     <p><span class="day">${card.day[0]} DAY</span> <span class="day">${card.day[1]} NIGHT</span></p>
                     <p class="price">Starts from <span class="price-val"> $${card.price}</span></p>
                 </div>`;
-
+        cardDiv.addEventListener('click',()=>{
+            window.location.href =`package.html `
+        })
         packageDiv.appendChild(cardDiv);
     })
 

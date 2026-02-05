@@ -1,4 +1,4 @@
-import { internationalPlace, domestic } from "./data.js";
+import { internationalPlace, domestic,places } from "./data.js";
 import { setDisplay } from "./ui.js";
 
 const domeDisp = document.getElementById('domestic-div');
