@@ -7,16 +7,22 @@ const dis = document.getElementById('search-result')
 function search() {
     // first clear previous
     dis.innerHTML = '';
+    dis.style.display = 'none';
 
     // get the search key
     const key = input.value.trim().toLowerCase();
+
+    if (!key) {
+        return;
+    }
 
     // check there is any place starts with that prefix
     const placeList = places.filter((place) => place.name.toLowerCase().startsWith(key));
 
     // if no place show an error message
-    if (!placeList) {
-        dis.style.display = 'none'
+    if (placeList.length == 0) {
+        // dis.innerHTML = `<p>No such place!</p>`;
+        // dis.style.display = 'none';
         return;
     }
 
@@ -35,11 +41,25 @@ function search() {
     dis.style.display = 'flex';
 }
 
-input.addEventListener("keydown", function (event) {
-    if (event.key === 'Enter') {
-        search();
-    }
-})
+function debounce(func, delay) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func();
+        }, delay);
+    };
+}
+
+const sear = debounce(search, 300);
+
+input.addEventListener('keyup', sear);
+
+// input.addEventListener("keydown", function (event) {
+//     if (event.key === 'Enter') {
+//         search();
+//     }
+// })
 
 // to cancel the result div . make the display
 document.getElementById('content-div').addEventListener('click', () => {

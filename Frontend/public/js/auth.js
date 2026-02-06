@@ -90,6 +90,12 @@ function login() {
     const email = document.getElementById('log-email').value.trim();
     const pass = document.getElementById('log-pass').value.trim();
 
+    if (!email || !pass) {
+        warn.innerText = `Invalid user name`;
+        warn.style.color = 'red';
+        return;
+    }
+
     const user = users.find(user => user.email.toLowerCase
         () === email.toLowerCase());
     if (!user) {
@@ -146,8 +152,8 @@ document.getElementById('mylogin').addEventListener('submit', (event) => {
 
 
 
-document.getElementById('sign-btn').addEventListener('click', openSignUp);
-document.getElementById('sign-btn3').addEventListener('click', openSignUp);
+document.getElementById('login-home').addEventListener('click', openLogin);
+document.getElementById('login-btn3').addEventListener('click', openLogin);
 document.getElementById('close1').addEventListener('click', closeLogin);
 
 document.getElementById('sign-btn1').addEventListener('click', e => {

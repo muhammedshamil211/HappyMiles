@@ -21,8 +21,8 @@ export function setPackageDiv(name) {
                     <p><span class="day">${card.day[0]} DAY</span> <span class="day">${card.day[1]} NIGHT</span></p>
                     <p class="price">Starts from <span class="price-val"> $${card.price}</span></p>
                 </div>`;
-        cardDiv.addEventListener('click',()=>{
-            window.location.href =`package.html `
+        cardDiv.addEventListener('click', () => {
+            window.location.href = `package.html `
         })
         packageDiv.appendChild(cardDiv);
     })
@@ -39,8 +39,7 @@ export function setDisplay(place, cat) {
         img.src = place.image;
         h3.innerText = place.name;
 
-        div.appendChild(img);
-        div.appendChild(h3);
+        div.append(img, h3);
 
         div.addEventListener('click', () => {
             window.location.href = `location.html?place=${place.name}`;

@@ -10,6 +10,7 @@ const display = document.getElementById('place-div');
 
 display.style.display = 'flex';
 domeDisp.style.display = 'none';
+display.in
 
 setDisplay(internationalPlace, display);
 setDisplay(domestic, domeDisp);
@@ -29,7 +30,9 @@ document.getElementById('domes').addEventListener('click', e => {
 });
 
 const params = new URLSearchParams(window.location.search);
+// console.log(params);
 const placeName = params.get('place');
+// console.log(placeName)
 
 if (placeName) {
     setPackageDiv(placeName);
@@ -37,3 +40,4 @@ if (placeName) {
 } else {
     setPackageDiv('Dubai');
 }
+

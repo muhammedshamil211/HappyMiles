@@ -38,16 +38,15 @@ ul {
     background-image: url(image/landing.jpg);
     background-position: top;
     margin: 0.5rem;
-    border-radius: 3.1rem;
-    max-height: 80%;
-    height: 650px;
+    border-radius: clamp(1.5rem, 1vw, 3.1rem);
+    height: clamp(400px, 80vh, 650px);
 }
 
 .overlay {
     position: absolute;
     inset: 0;
     background-color: rgba(5, 5, 5, 0.4);
-    border-radius: 3.1rem;
+    border-radius: clamp(1.5rem, 1vw, 3.1rem);
 
 }
 
@@ -142,11 +141,11 @@ nav button:hover {
 }
 
 .search-bar input {
-    padding: 1.2rem 2rem;
+    padding: clamp(0.5rem, 6vh, 1.2rem) clamp(1rem, 2vw, 2rem);
     border-radius: 30px;
     border: none;
     width: 90%;
-    font-size: 1.1rem;
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
 }
 
 #search-btn {
@@ -363,6 +362,16 @@ input:focus {
     gap: 0.5rem;
 }
 
+.place-div div img {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        border 0.s ease;
+}
+
+.place-div div img:hover {
+    border: 4px solid wheat;
+    transform: scale(1.05);
+}
+
 .place-div img {
     width: clamp(8rem, 11vw, 12rem);
     height: clamp(8rem, 11vw, 12rem);
@@ -397,6 +406,13 @@ h3 {
     gap: 10px;
     width: 31%;
     background-color: rgb(246, 246, 246);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
 }
 
 .card img {
